@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="
+https://cdn.jsdelivr.net/npm/mathjs@11.8.0/lib/browser/math.min.js
+"></script> <!--Adds math.js libraryr-->
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Newton's Method</title>
+    <style>
+      /*  */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #888888;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px #888888;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 0px 5px #888888;
+      }
+      button:hover {
+        background-color: #3e8e41;
+      }
+      table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Newton's Method</h1>
+    <div class="container">
+      <label for="function">Function:</label>
+      <input type="text" id="function" placeholder="Enter a function in terms of x">
+      <label for="guess">Guess:</label>
+      <input type="text" id="guess" placeholder="Enter a guess">
+      <button onclick="newtonsMethod()">Calculate</button>
+      <div id="outputGraph"></div>
+      <table id="outputTable">
+        <thead>
+          <tr>
+            <th>n</th>
+            <th>x_n</th>
+            <th>x_n+1</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

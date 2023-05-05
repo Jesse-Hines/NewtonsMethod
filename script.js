@@ -1,7 +1,10 @@
 function newtonsMethod() {
     let func = document.getElementById("function").value;
     let guess = parseFloat(document.getElementById("guess").value);
-  
+    if (!func || !guess) {
+      alert("Please fill out all fields");
+      return;
+    }
     let n = 0;
     let x_n = guess;
     let x_np1 = 0;
@@ -38,7 +41,13 @@ function newtonsMethod() {
       n++;
       x_n = x_np1;
       x_np2 = x_np1;
+
+      if (n === 250) {
+        alert("Value does not converge");
+        return;
+      }
     }
+
   
     // Display the graph from ploty
 let scope = {
